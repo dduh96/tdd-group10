@@ -1,5 +1,7 @@
 package pt.ipp.isep.dei.examples.tdd.basic.domain;
 
+import static java.lang.Math.abs;
+
 /**
  * Calculator class.
  * This class is very simple in order to demonstrate how to build test cases for Unit Testing.
@@ -30,11 +32,9 @@ public class Calculator {
     }
 
     public int factorial(int firstOperand) {
-        if(firstOperand==0) return 1;
-        int result = firstOperand;
-        while(firstOperand >1){
-            firstOperand--;
-            result = result * (firstOperand);
+        int result = 1;
+        for (int i = 1; i <= firstOperand; i++){
+            result *= i;
         }
 
         return result;
