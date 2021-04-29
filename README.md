@@ -141,7 +141,7 @@ expected: 4
 Case 6: 0 - positive
 ```
 0 - 3
-expected: -4
+expected: -3
 ```
 Case 7: negative - 0
 ```

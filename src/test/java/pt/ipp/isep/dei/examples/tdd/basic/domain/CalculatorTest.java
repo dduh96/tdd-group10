@@ -95,6 +95,338 @@ public class CalculatorTest {
         // Assert
         assertEquals(expectedResult, result);
     }
+
+
+    /**
+     * SUM
+     */
+    // 4 + 3 = 7
+    @Test
+    public void ensureFourPlusThreeEqualsSeven() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 4;
+        int secondOperand = 3;
+        int expectedResult = 7;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    //4 + -3 = 1
+    @Test
+    public void ensureFourPlusMinusThreeEqualsOne() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 4;
+        int secondOperand = -3;
+        int expectedResult = 1;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    //-4 + 3 = -1
+    @Test
+    public void ensureMinusFourPlusThreeEqualsMinusOne() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = -4;
+        int secondOperand = 3;
+        int expectedResult = -1;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    //-4 + -3 = -7
+    @Test
+    public void ensureMinusFourPlusMinusThreeEqualsMinusSeven() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = -4;
+        int secondOperand = -3;
+        int expectedResult = -7;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    //4 + 0 = 4
+    @Test
+    public void ensureFourPlusZeroEqualsFour() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 4;
+        int secondOperand = 0;
+        int expectedResult = 4;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+
+    //0 + 3 = 3
+    @Test
+    public void ensureZeroPlusThreeEqualsThree() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 0;
+        int secondOperand = 3;
+        int expectedResult = 3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    //-4 + 0 = -4
+    @Test
+    public void ensureMinusFourPlusZeroEqualsMinusFour() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = -4;
+        int secondOperand = 0;
+        int expectedResult = -4;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+
+    //0 + -3 = -3
+    @Test
+    public void ensureZeroPlusMinusThreeEqualsMinusThree() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 0;
+        int secondOperand = -3;
+        int expectedResult = -3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+
+    /**
+     * SUBTRACT
+     */
+    //4 - 3 = 1
+    @Test
+    public void ensureFourMinusThreeEqualsOne() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 4;
+        int secondOperand = 3;
+        int expectedResult = 1;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    //4 - -3 = 7
+    @Test
+    public void ensureFourMinusMinusThreeEqualsSeven() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 4;
+        int secondOperand = -3;
+        int expectedResult = 7;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    //-4 - 3 = -7
+    @Test
+    public void ensureMinusFourMinusThreeEqualsMinusSeven() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = -4;
+        int secondOperand = 3;
+        int expectedResult = -7;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+
+    //-4 - -3 = -1
+    @Test
+    public void ensureMinusFourMinusMinusThreeEqualsMinusOne() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = -4;
+        int secondOperand = -3;
+        int expectedResult = -1;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    //4 - 0 = 4
+    @Test
+    public void ensureFourMinusZeroEqualsFour() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 4;
+        int secondOperand = 0;
+        int expectedResult = 4;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    //0 - 3 = -3
+    @Test
+    public void ensureZeroMinusThreeEqualsMinusThree() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 0;
+        int secondOperand = 3;
+        int expectedResult = -3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    //-4 - 0 = -4
+    @Test
+    public void ensureMinusFourMinusZeroEqualsMinusFour() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = -4;
+        int secondOperand = 0;
+        int expectedResult = -4;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+
+    //0 - -3 = 3
+    @Test
+    public void ensureZeroMinusMinusThreeEqualsThree() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 0;
+        int secondOperand = -3;
+        int expectedResult = 3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
 }
 
 
