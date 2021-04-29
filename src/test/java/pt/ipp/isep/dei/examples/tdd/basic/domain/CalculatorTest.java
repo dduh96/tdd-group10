@@ -2,8 +2,7 @@ package pt.ipp.isep.dei.examples.tdd.basic.domain;
 
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorTest {
 
@@ -95,6 +94,368 @@ public class CalculatorTest {
         // Assert
         assertEquals(expectedResult, result);
     }
+
+    /**
+     * Multiply
+     */
+    @Test
+    public void ensureFourTimesThreeEqualsTwelve(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = 12;
+        int firsOperand = 4;
+        int secondOperand = 3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().multiply(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void ensureFourTimesMinusThreeEqualsMinusTwelve(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = -12;
+        int firsOperand = 4;
+        int secondOperand = -3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().multiply(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void ensureMinusFourTimesThreeEqualsMinusTwelve(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = -12;
+        int firsOperand = -4;
+        int secondOperand = 3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().multiply(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void ensureMinusFourTimesMinusThreeEqualsTwelve(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = 12;
+        int firsOperand = -4;
+        int secondOperand = -3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().multiply(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void ensureFourTimesZeroEqualsZero(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = 0;
+        int firsOperand = 4;
+        int secondOperand = 0;
+        int result = 3;
+
+        // Act
+        result = new Calculator().multiply(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void ensureZeroTimesThreeEqualsZero(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = 0;
+        int firsOperand = 0;
+        int secondOperand = 4;
+        int result = 3;
+
+        // Act
+        result = new Calculator().multiply(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void ensureMinusFourTimesZeroEqualsZero(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = 0;
+        int firsOperand = -4;
+        int secondOperand = 0;
+        int result = 3;
+
+        // Act
+        result = new Calculator().multiply(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void ensureZeroTimesMinusThreeEqualsZero(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = 0;
+        int firsOperand = 0;
+        int secondOperand = -3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().multiply(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    /**
+     * Divide
+     */
+    @Test
+    public void ensureEightDividedByThreeEqualsTwo(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = 2;
+        int firsOperand = 8;
+        int secondOperand = 3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().divide(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void ensureEightDividedByMinusThreeEqualsMinusTwo(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = -2;
+        int firsOperand = 8;
+        int secondOperand = -3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().divide(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void ensureMinusEightDividedByThreeEqualsMinusTwo(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = -2;
+        int firsOperand = -8;
+        int secondOperand = 3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().divide(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void ensureMinusEightDividedByMinusThreeEqualsTwo(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = 2;
+        int firsOperand = -8;
+        int secondOperand = -3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().divide(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void ensureEightDividedByZeroThrowsError(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Assert
+        assertThrows(ArithmeticException.class, ()-> {
+            int firsOperand = 8;
+            int secondOperand = 0;
+            new Calculator().divide(firsOperand, secondOperand);
+        });
+
+    }
+
+    @Test
+    public void ensureZeroDividedByThreeEqualsZero(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = 0;
+        int firsOperand = 0;
+        int secondOperand = 3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().divide(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void ensureMinusEightDividedByZeroThrowsError(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Assert
+        assertThrows(ArithmeticException.class, ()-> {
+            int firsOperand = -8;
+            int secondOperand = 0;
+            new Calculator().divide(firsOperand, secondOperand);
+        });
+    }
+
+    @Test
+    public void ensureZeroDividedByMinusThreeEqualsZero(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = 0;
+        int firsOperand = 0;
+        int secondOperand = -3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().divide(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    /**
+     * Factorial
+     */
+    @Test
+    public void ensureFactorialOfThreeEqualsSix(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = 6;
+        int firstOperand = 3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().factorial(firstOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void ensureFactorialOfMinusThreeEqualsOne(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = 1;
+        int firstOperand = 3;
+        int result = 3;
+
+        // Act
+        result = new Calculator().factorial(firstOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void ensureFactorialOfZeroEqualsOne(){
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = 1;
+        int firstOperand = 0;
+        int result = 3;
+
+        // Act
+        result = new Calculator().factorial(firstOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+
+
+
 }
 
 
