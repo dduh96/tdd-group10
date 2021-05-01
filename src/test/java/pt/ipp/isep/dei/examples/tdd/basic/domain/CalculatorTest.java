@@ -1,5 +1,6 @@
 package pt.ipp.isep.dei.examples.tdd.basic.domain;
 
+import org.junit.Test;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -37,7 +38,7 @@ public class CalculatorTest {
     @Test
     @Disabled
     public void failingTest() {
-        fail("a disabled failing test");
+        //fail("a disabled failing test");
     }
 
     /**
@@ -279,7 +280,7 @@ public class CalculatorTest {
         int result = 3;
 
         // Act
-        result = new Calculator().sum(firsOperand, secondOperand);
+        result = new Calculator().subtract(firsOperand, secondOperand);
 
         // Assert
         assertEquals(expectedResult, result);
@@ -299,7 +300,7 @@ public class CalculatorTest {
         int result = 3;
 
         // Act
-        result = new Calculator().sum(firsOperand, secondOperand);
+        result = new Calculator().subtract(firsOperand, secondOperand);
 
         // Assert
         assertEquals(expectedResult, result);
@@ -319,7 +320,7 @@ public class CalculatorTest {
         int result = 3;
 
         // Act
-        result = new Calculator().sum(firsOperand, secondOperand);
+        result = new Calculator().subtract(firsOperand, secondOperand);
 
         // Assert
         assertEquals(expectedResult, result);
@@ -340,7 +341,7 @@ public class CalculatorTest {
         int result = 3;
 
         // Act
-        result = new Calculator().sum(firsOperand, secondOperand);
+        result = new Calculator().subtract(firsOperand, secondOperand);
 
         // Assert
         assertEquals(expectedResult, result);
@@ -380,7 +381,7 @@ public class CalculatorTest {
         int result = 3;
 
         // Act
-        result = new Calculator().sum(firsOperand, secondOperand);
+        result = new Calculator().subtract(firsOperand, secondOperand);
 
         // Assert
         assertEquals(expectedResult, result);
@@ -421,7 +422,7 @@ public class CalculatorTest {
         int result = 3;
 
         // Act
-        result = new Calculator().sum(firsOperand, secondOperand);
+        result = new Calculator().subtract(firsOperand, secondOperand);
 
         // Assert
         assertEquals(expectedResult, result);
@@ -544,7 +545,7 @@ public class CalculatorTest {
         assertEquals(expectedResult, result);
     }
 
-    @Test
+    @org.junit.Test
     public void ensureMinusFourTimesZeroEqualsZero(){
         //HACK: for demonstration purposes only
         System.out.println("\t\tExecuting " + new Object() {
@@ -757,7 +758,7 @@ public class CalculatorTest {
 
         // Arrange
         int expectedResult = 1;
-        int firstOperand = 3;
+        int firstOperand = -3;
         int result = 3;
 
         // Act
