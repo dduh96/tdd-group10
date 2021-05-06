@@ -1,9 +1,10 @@
 package pt.ipp.isep.dei.examples.tdd.basic.domain;
 
-import org.junit.Test;
+
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorTest {
 
@@ -545,7 +546,7 @@ public class CalculatorTest {
         assertEquals(expectedResult, result);
     }
 
-    @org.junit.Test
+    @Test
     public void ensureMinusFourTimesZeroEqualsZero(){
         //HACK: for demonstration purposes only
         System.out.println("\t\tExecuting " + new Object() {

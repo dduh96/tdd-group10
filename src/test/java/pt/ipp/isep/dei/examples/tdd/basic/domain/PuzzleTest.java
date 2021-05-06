@@ -1,8 +1,7 @@
 package pt.ipp.isep.dei.examples.tdd.basic.domain;
 
-import org.junit.Test;
-
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -12,6 +11,7 @@ public class PuzzleTest {
      * checkInputStringCaseOne: string only contains frp
      */
     @Test
+    @Disabled
     public void checkInputStringCaseOne() {
         Puzzle puzzle = new Puzzle();
 
@@ -42,6 +42,7 @@ public class PuzzleTest {
      * checkInputStringCaseThree: string is null
      */
     @Test
+    @Disabled
     public void checkInputStringCaseThree() {
 
         // Assert
