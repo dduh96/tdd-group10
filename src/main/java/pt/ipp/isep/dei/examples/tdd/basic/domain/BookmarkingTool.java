@@ -18,8 +18,7 @@ public class BookmarkingTool {
                 if (nextBookmark.getUrl().equals(url)) {
                     nextBookmark.setRating(nextBookmark.getRating() + 1);
                     return nextBookmark;
-                }
-            }
+                } }
         }
         savedBookmarks.add(bookmark);
         return bookmark;
@@ -34,8 +33,6 @@ public class BookmarkingTool {
                 nextBookmark.setKeyword(keyword);
                 return true;
             }
-            else
-                return false;
         }
         return true;
     }
