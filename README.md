@@ -263,3 +263,150 @@ Case 3: 0
 0!
 expected: 1
  ```
+ 
+ 
+ #
+ #
+ #
+ 
+## Testcases
+### checkIfNotDuplicate(Bookmark bookmark)
+Case 1: Is Duplicate
+```
+Bookmark List contains: "https://www.google.com"
+new Bookmark URL = "https://www.google.com"
+
+expected: false
+
+```
+Case 2: Is not Duplicate
+ ```
+Bookmark List does not contain: "https://www.google.com"
+new Bookmark URL = "https://www.google.com"
+
+expected: true
+ ```
+Case 3: Is NULL
+ ```
+URL = NULL
+
+expected false
+ ```
+#
+### checkIfUrlValid(String url)
+###### only checks syntax of URL string, not if website exists
+
+Case 1: URL is not valid
+```
+URL = "hello, world!"
+expected: false
+
+```
+Case 2: URL is valid
+ ```
+URL = "https://www.google.com"
+expected: true
+ ```
+
+Case 3: String is NULL
+ ```
+URL = null
+expected: false
+ ```
+
+
+
+#
+### addKeywordToUrl(String keyword, String url)
+###### Adds a Keyword to a URL, if the bookmark already has an associated URL it is simply overwritten
+
+Case 1: is successful
+```
+Bookmarklist contains URL
+URL = "https://github.com/"
+keyword = "programming"
+
+expected: true
+```
+Case 2: URL does not exist in Bookmarklist
+ ```
+Bookmarklist does not contain URL
+URL = "https://github.com/"
+keyword = "programming"
+
+expected: false
+ ```
+Case 3: Keyword is NULL
+ ```
+Bookmarklist contains URL
+URL = "https://github.com/"
+keyword = NULL
+
+expected: false
+ ```
+Case 4: URL is NULL
+```
+Bookmarklist contains URL
+URL = NULL
+keyword = "programming"
+
+expected: false
+```
+Case 5: Keyword and URL is NULL
+```
+Bookmarklist contains URL
+URL = NULL
+keyword = NULL
+
+expected: true
+```
+Case 6: Bookmark has already associated Keyword
+```
+Bookmarklist contains URL with keyword "work"
+URL = "https://github.com/"
+keyword = "programming"
+
+expected: true
+```
+Case 7: Testing Case Sensitivity
+```
+Bookmarklist contains URL with keyword "Programming"
+URL = "https://github.com/"
+keyword = "programming"
+
+expected: true
+```
+
+
+#
+### addBookmark(String url)
+###### tries to add a new Bookmark, if successful it returns the created object
+Case 1: URL does not already exist, is successful
+```
+Bookmarklist does not contain URL 
+URL = "https://github.com/"
+
+expected: "https://github.com/"
+```
+Case 2: URL already exists
+ ```
+Bookmarklist does contain URL 
+URL = "https://github.com/"
+(increases rating)
+
+expected: 2
+ ```
+Case 3: URL is NULL
+ ```
+Bookmarklist does not contain URL 
+URL = NULL
+
+expected: NULL
+ ```
+Case 4: URL is invalid
+```
+Bookmarklist does not contain URL 
+URL = "hello, world!"
+
+expected: NULL
+```
