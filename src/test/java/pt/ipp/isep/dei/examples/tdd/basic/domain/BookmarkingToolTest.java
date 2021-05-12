@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.awt.print.Book;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class BookmarkingToolTest {
@@ -430,6 +431,29 @@ public class BookmarkingToolTest {
         String keyword = "search";
 
         List<Bookmark> expected = Arrays.asList(bm2);
+        List<Bookmark> actual = tool.filterByKeyword(keyword);
+
+        assertArrayEquals(expected.toArray(), actual.toArray());
+
+    }
+
+    /**
+     * filterByKeyword(): List<Bookmark>
+     * Case 3: No Bookmarks found
+     */
+    @Test
+    public void filterByKeyword_caseThree(){
+        BookmarkingTool tool = new BookmarkingTool();
+        assertNull(tool.filterByKeyword(null));
+        Bookmark bm1 = new Bookmark("http://github.com");
+        Bookmark bm2 = new Bookmark("http://google.com");
+        bm1.setKeyword("programming");
+        bm2.setKeyword("search");
+        tool.setSavedBookmarks(new ArrayList<>(Arrays.asList(bm1, bm2)));
+
+        String keyword = "sport";
+
+        List<Bookmark> expected = Collections.emptyList();
         List<Bookmark> actual = tool.filterByKeyword(keyword);
 
         assertArrayEquals(expected.toArray(), actual.toArray());
