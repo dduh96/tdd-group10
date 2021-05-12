@@ -421,7 +421,6 @@ public class BookmarkingToolTest {
     @Test
     public void filterByKeyword_caseTwo(){
         BookmarkingTool tool = new BookmarkingTool();
-        assertNull(tool.filterByKeyword(null));
         Bookmark bm1 = new Bookmark("http://github.com");
         Bookmark bm2 = new Bookmark("http://google.com");
         bm1.setKeyword("programming");
@@ -444,7 +443,6 @@ public class BookmarkingToolTest {
     @Test
     public void filterByKeyword_caseThree(){
         BookmarkingTool tool = new BookmarkingTool();
-        assertNull(tool.filterByKeyword(null));
         Bookmark bm1 = new Bookmark("http://github.com");
         Bookmark bm2 = new Bookmark("http://google.com");
         bm1.setKeyword("programming");
@@ -459,5 +457,20 @@ public class BookmarkingToolTest {
         assertArrayEquals(expected.toArray(), actual.toArray());
 
     }
+
+    /**
+     * filterByKeyword(): List<Bookmark>
+     * Case 4: savedBookmarks empty
+     */
+    @Test
+    public void filterByKeyword_caseFour(){
+        BookmarkingTool tool = new BookmarkingTool();
+
+        String keyword = "sport";
+
+        assertNull(tool.filterByKeyword(keyword));
+
+    }
+
 
 }
