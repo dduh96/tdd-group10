@@ -70,10 +70,15 @@ mvn test jacoco:report org.pitest:pitest-maven:mutationCoverage -DhistoryInputFi
 #
 #
 # Testcases Bookmarking
+
 ## new testcases to increase mutation %
 - [x] addKeywordToUrl Case 8: Check if keyword was added
 - [x] addBookmark Case 5: Check size of Bookmarklist
 
+## countSecureURLs() : 
+- [ ] Case 1: List empty -> return -1
+- [ ] Case 2: No secure URLs -> return 0
+- [ ] Case 3: has secure URLs -> return count
 
 ## Testcases
 ### checkIfNotDuplicate(Bookmark bookmark)
