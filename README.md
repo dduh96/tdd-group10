@@ -72,7 +72,7 @@ mvn test jacoco:report org.pitest:pitest-maven:mutationCoverage -DhistoryInputFi
 # Testcases Bookmarking
 ## new testcases to increase mutation %
 - [x] addKeywordToUrl Case 8: Check if keyword was added
-- [ ] addBookmark Case 5: Check size of Bookmarklist
+- [x] addBookmark Case 5: Check size of Bookmarklist
 
 
 ## Testcases

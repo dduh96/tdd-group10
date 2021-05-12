@@ -340,6 +340,16 @@ public class BookmarkingToolTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void addBookmark_caseFive(){
+        BookmarkingTool tool = new BookmarkingTool();
+        String url = "https://github.com";
+        tool.addBookmark(url);
 
+        int expected = 1;
+        int actual = tool.getSavedBookmarks().size();
+
+        assertEquals(expected, actual);
+    }
 
 }
