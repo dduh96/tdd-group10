@@ -518,5 +518,26 @@ public class BookmarkingToolTest {
 
     }
 
+    /**
+     * filterByKeyword(List keywords)
+     * Case 2: keywords are NULL or empty
+     */
+    @Test
+    public void filterByKeywords_caseTwo(){
+        BookmarkingTool tool = new BookmarkingTool();
+        Bookmark bm1 = new Bookmark("http://github.com");
+        Bookmark bm2 = new Bookmark("http://google.com");
+        Bookmark bm3 = new Bookmark("https://tumblr.com");
+        bm1.setKeyword("programming");
+        bm2.setKeyword("search");
+        bm3.setKeyword("leisure");
+        tool.setSavedBookmarks(new ArrayList<>(Arrays.asList(bm1, bm2, bm3)));
+
+        List<String> keywords = Collections.emptyList();
+
+        assertNull(tool.filterByKeyword(keywords));
+
+    }
+
 
 }

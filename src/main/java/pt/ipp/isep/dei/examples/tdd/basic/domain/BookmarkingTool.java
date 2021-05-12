@@ -88,8 +88,12 @@ public class BookmarkingTool {
         return filteredList;
     }
 
-    public List<Bookmark> filterByKeyword(List<String> keyword){
-        return null;
+    public List<Bookmark> filterByKeyword(List<String> keywords){
+        ArrayList<Bookmark> filteredList = new ArrayList<>();
+        keywords.forEach( kw -> {
+            filteredList.addAll(filterByKeyword(kw));
+        });
+        return filteredList;
     }
 
 }
