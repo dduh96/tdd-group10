@@ -77,7 +77,7 @@ public class BookmarkingTool {
 
     public List<Bookmark> filterByKeyword(String keyword){
         List<Bookmark> filteredList;
-        if (keyword == null){
+        if (keyword == null || savedBookmarks.isEmpty()){
             filteredList = null;
         }else{
             filteredList = savedBookmarks.stream().filter(bm -> bm.getKeyword().equals(keyword)).collect(Collectors.toList());

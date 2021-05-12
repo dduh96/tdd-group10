@@ -472,5 +472,27 @@ public class BookmarkingToolTest {
 
     }
 
+    /**
+     * filterByKeyword(): List<Bookmark>
+     * Case 5: Bookmarks found, Case sensitivity
+     */
+    @Test
+    public void filterByKeyword_caseFive(){
+        BookmarkingTool tool = new BookmarkingTool();
+        Bookmark bm1 = new Bookmark("http://github.com");
+        Bookmark bm2 = new Bookmark("http://google.com");
+        bm1.setKeyword("programming");
+        bm2.setKeyword("search");
+        tool.setSavedBookmarks(new ArrayList<>(Arrays.asList(bm1, bm2)));
+
+        String keyword = "Search";
+
+        List<Bookmark> expected = Arrays.asList(bm2);
+        List<Bookmark> actual = tool.filterByKeyword(keyword);
+
+        assertArrayEquals(expected.toArray(), actual.toArray());
+
+    }
+
 
 }

@@ -94,7 +94,7 @@ mvn test jacoco:report org.pitest:pitest-maven:mutationCoverage -DhistoryInputFi
 - [x] Case 1: keyword is NULL -> return NULL
 - [x] Case 2: bms found -> return List
 - [x] Case 3: no bms found -> return emptyList
-- [ ] Case 4: List is empty -> return NULL
+- [x] Case 4: List is empty -> return NULL
 - [ ] Case 5: check Case Sensitivity
 
 
