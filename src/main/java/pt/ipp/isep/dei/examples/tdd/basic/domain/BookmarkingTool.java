@@ -75,7 +75,11 @@ public class BookmarkingTool {
     }
 
     public List<Bookmark> filterByKeyword(String keyword){
-        return Collections.emptyList();
+        ArrayList<Bookmark> filteredList = new ArrayList<>();
+        if (keyword == null){
+            filteredList = null;
+        }
+        return filteredList;
     }
 
 }
