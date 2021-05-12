@@ -53,13 +53,8 @@ public class BookmarkingTool {
 
 
     public Bookmark checkIfNotDuplicate(String url) {
-        if (url == null) return null;
-        Bookmark isNotDuplicate = null;
-        while (isNotDuplicate == null && savedBookmarks.iterator().hasNext()) {
-            Bookmark nextBookmark = savedBookmarks.iterator().next();
-            if (nextBookmark.getUrl().equals(url)) isNotDuplicate = nextBookmark;
-        }
-        return isNotDuplicate;
+        if (url == null || savedBookmarks.isEmpty()) return null;
+        return savedBookmarks.stream().filter(bm -> bm.getUrl().equals(url)).findFirst().orElse(null);
     }
 
 
@@ -72,7 +67,9 @@ public class BookmarkingTool {
     }
 
     public int countSecureUrl(){
-        return 0;
+        int count = 0;
+        count = (int)savedBookmarks.stream().filter( bm -> bm.getUrl().contains("https")).count();
+        return count;
     }
 
 }
