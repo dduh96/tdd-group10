@@ -560,5 +560,29 @@ public class BookmarkingToolTest {
 
     }
 
+    /**
+     * filterByKeyword(List keywords)
+     * Case 4: bookmarks for some keywords found
+     */
+    @Test
+    public void filterByKeywords_caseFour(){
+        BookmarkingTool tool = new BookmarkingTool();
+        Bookmark bm1 = new Bookmark("http://github.com");
+        Bookmark bm2 = new Bookmark("http://google.com");
+        Bookmark bm3 = new Bookmark("https://tumblr.com");
+        bm1.setKeyword("programming");
+        bm2.setKeyword("search");
+        bm3.setKeyword("leisure");
+        tool.setSavedBookmarks(new ArrayList<>(Arrays.asList(bm1, bm2, bm3)));
+
+        List<String> keywords = Arrays.asList("Search", "Leisure", "Sport");
+
+        List<Bookmark> expected = Arrays.asList(bm2, bm3);
+        List<Bookmark> actual = tool.filterByKeyword(keywords);
+
+        assertArrayEquals(expected.toArray(), actual.toArray());
+
+    }
+
 
 }

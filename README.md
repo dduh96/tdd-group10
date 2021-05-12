@@ -71,8 +71,8 @@ mvn test jacoco:report org.pitest:pitest-maven:mutationCoverage -DhistoryInputFi
 # Features Bookmarking
 - [x] count secure URLs
 - [ ] associate bookmarks from same domain
-- [ ] filter bookmarks by one keyword
-- [ ] filter bookmarks by one or more keywords
+- [x] filter bookmarks by one keyword
+- [x] filter bookmarks by one or more keywords
 - [ ] remove TAG from bookmark
 - [ ] remove URL bm
 - [ ] add current date/time when adding bm
@@ -99,9 +99,9 @@ mvn test jacoco:report org.pitest:pitest-maven:mutationCoverage -DhistoryInputFi
 
 ## filterByKeyword(List<String> keywords): List(Bookmark)
 - [x] Case 1: bookmarks for all keywords found -> return all found
-- [ ] Case 2: keywords are empty -> return NULL
-- [ ] Case 3: keywords are NULL -> return NULL
-- [ ] Case 4: bms for some keywords found, but not for others -> return List for all found bms 
+- [x] Case 2: keywords are empty -> return NULL
+- [x] Case 3: keywords are NULL -> return NULL
+- [x] Case 4: bms for some keywords found, but not for others -> return List for all found bms 
 
 
 ## Testcases
