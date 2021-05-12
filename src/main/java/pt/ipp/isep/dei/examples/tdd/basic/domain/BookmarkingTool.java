@@ -67,8 +67,10 @@ public class BookmarkingTool {
     }
 
     public int countSecureUrl(){
-        int count = 0;
-        count = (int)savedBookmarks.stream().filter( bm -> bm.getUrl().contains("https")).count();
+        int count;
+        if(!savedBookmarks.isEmpty())
+            count = (int)savedBookmarks.stream().filter( bm -> bm.getUrl().contains("https")).count();
+        else count = -1;
         return count;
     }
 

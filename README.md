@@ -78,8 +78,8 @@ mvn test jacoco:report org.pitest:pitest-maven:mutationCoverage -DhistoryInputFi
 ## countSecureURLs() : 
 - [x] Case 1: has secure URLs -> return count
 - [x] Case 2: No secure URLs -> return 0
-- [ ] Case 3: List empty -> return -1
-- [ ] Case 4: URL starts with "www."
+- [x] Case 3: List empty -> return -1
+
 
 ## Testcases
 ### checkIfNotDuplicate(Bookmark bookmark)
