@@ -88,4 +88,8 @@ public class BookmarkingTool {
         return filteredList;
     }
 
+    public List<Bookmark> filterByKeyword(List<String> keyword){
+        return null;
+    }
+
 }

@@ -95,7 +95,12 @@ mvn test jacoco:report org.pitest:pitest-maven:mutationCoverage -DhistoryInputFi
 - [x] Case 2: bms found -> return List
 - [x] Case 3: no bms found -> return emptyList
 - [x] Case 4: List is empty -> return NULL
-- [ ] Case 5: check Case Sensitivity
+- [x] Case 5: check Case Sensitivity
+
+## filterByKeyword(List<String> keywords): List(Bookmark)
+- [ ] Case 1: bookmarks for all keywords found -> return all found
+- [ ] Case 2: keywords are NULL or empty-> return NULL
+- [ ] Case 3: bms for some keywords found, but not for others -> return List for all found bms 
 
 
 ## Testcases
