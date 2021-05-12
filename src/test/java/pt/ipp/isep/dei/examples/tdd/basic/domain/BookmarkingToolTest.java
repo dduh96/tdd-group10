@@ -352,4 +352,23 @@ public class BookmarkingToolTest {
         assertEquals(expected, actual);
     }
 
+    /**
+     * countSecureUrl(): int
+     * Case 1: has secure URLs
+     */
+
+    @Test
+    public void countSecureUrl_caseOne(){
+        BookmarkingTool tool = new BookmarkingTool();
+        String url1 = "https://github.com";
+        String url2 = "https://google.com";
+        tool.addBookmark(url1);
+        tool.addBookmark(url2);
+
+        int expected = 2;
+        int actual = tool.countSecureUrl();
+
+        assertEquals(expected, actual);
+    }
+
 }

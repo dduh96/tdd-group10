@@ -71,4 +71,8 @@ public class BookmarkingTool {
         this.savedBookmarks = savedBookmarks;
     }
 
+    public int countSecureUrl(){
+        return 0;
+    }
+
 }
