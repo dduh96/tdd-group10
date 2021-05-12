@@ -7,6 +7,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class BookmarkingTool {
     private ArrayList<Bookmark> savedBookmarks = new ArrayList<>();
@@ -75,9 +76,11 @@ public class BookmarkingTool {
     }
 
     public List<Bookmark> filterByKeyword(String keyword){
-        ArrayList<Bookmark> filteredList = new ArrayList<>();
+        List<Bookmark> filteredList;
         if (keyword == null){
             filteredList = null;
+        }else{
+            filteredList = savedBookmarks.stream().filter(bm -> bm.getKeyword().equals(keyword)).collect(Collectors.toList());
         }
         return filteredList;
     }
