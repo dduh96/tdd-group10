@@ -67,20 +67,23 @@ public class BookmarkingTool {
         this.savedBookmarks = savedBookmarks;
     }
 
-    public int countSecureUrl(){
+    public int countSecureUrl() {
         int count;
-        if(!savedBookmarks.isEmpty())
-            count = (int)savedBookmarks.stream().filter( bm -> bm.getUrl().contains("https")).count();
+        if (!savedBookmarks.isEmpty())
+            count = (int) savedBookmarks.stream().filter(bm -> bm.getUrl().contains("https")).count();
         else count = -1;
         return count;
     }
 
-    public List<Bookmark> filterByKeyword(String keyword){
+    public List<Bookmark> filterByKeyword(String keyword) {
         List<Bookmark> filteredList;
-        if (keyword == null || savedBookmarks.isEmpty()){
+        if (keyword == null || savedBookmarks.isEmpty()) {
             filteredList = null;
-        }else{
-            filteredList = savedBookmarks.stream().filter(bm -> bm.getKeyword().equals(keyword)).collect(Collectors.toList());
+        } else {
+            filteredList = savedBookmarks
+                    .stream()
+                    .filter(bm -> bm.getKeyword().equals(keyword.toLowerCase()))
+                    .collect(Collectors.toList());
         }
         return filteredList;
     }
