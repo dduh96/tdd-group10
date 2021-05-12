@@ -90,9 +90,11 @@ public class BookmarkingTool {
 
     public List<Bookmark> filterByKeyword(List<String> keywords){
         ArrayList<Bookmark> filteredList = new ArrayList<>();
-        keywords.forEach( kw -> {
-            filteredList.addAll(filterByKeyword(kw));
-        });
+        if(keywords == null || keywords.isEmpty()){
+            return null;
+        }else{
+            keywords.forEach( kw -> filteredList.addAll(filterByKeyword(kw)));
+        }
         return filteredList;
     }
 
