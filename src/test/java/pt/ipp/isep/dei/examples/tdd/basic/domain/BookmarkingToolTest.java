@@ -402,4 +402,15 @@ public class BookmarkingToolTest {
         assertEquals(expected, actual);
     }
 
+    /**
+     * filterByKeyword(): List<Bookmark>
+     * Case 1: keyword is NULL -> return NULL
+     */
+    @Test
+    public void filterByKeyword_caseOne(){
+        BookmarkingTool tool = new BookmarkingTool();
+
+        assertNull(tool.filterByKeyword(null));
+    }
+
 }

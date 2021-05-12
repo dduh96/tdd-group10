@@ -74,4 +74,8 @@ public class BookmarkingTool {
         return count;
     }
 
+    public List<Bookmark> filterByKeyword(String keyword){
+        return Collections.emptyList();
+    }
+
 }

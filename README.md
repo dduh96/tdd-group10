@@ -68,17 +68,33 @@ mvn test jacoco:report org.pitest:pitest-maven:mutationCoverage -DhistoryInputFi
 
 #
 #
-#
+# Features Bookmarking
+- [x] count secure URLs
+- [ ] associate bookmarks from same domain
+- [ ] filter bookmarks by one keyword
+- [ ] filter bookmarks by one or more keywords
+- [ ] remove TAG from bookmark
+- [ ] remove URL bm
+- [ ] add current date/time when adding bm
+- [ ] sort bm by rating desc
+- [ ] sort bm by date desc
+
 # Testcases Bookmarking
 
 ## new testcases to increase mutation %
 - [x] addKeywordToUrl Case 8: Check if keyword was added
 - [x] addBookmark Case 5: Check size of Bookmarklist
 
-## countSecureURLs() : 
+## countSecureURLs(): int
 - [x] Case 1: has secure URLs -> return count
 - [x] Case 2: No secure URLs -> return 0
 - [x] Case 3: List empty -> return -1
+
+## filterByKeyword(String keyword): List(Bookmark)
+- [ ] Case 1: keyword is NULL -> return NULL
+- [ ] Case 2: bms found -> return List
+- [ ] Case 3: no bms found -> return NULL
+- [ ] Case 4: List is empty
 
 
 ## Testcases

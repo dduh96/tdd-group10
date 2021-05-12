@@ -12,7 +12,7 @@ public class Bookmark {
         keyword = "";
         rating = 1;
     }
-
+    
 
     public String getUrl() {
         return url;
@@ -41,5 +41,9 @@ public class Bookmark {
             return false;
         }
         return true;
+    }
+
+    public String associateByDomain(String url){
+        return null;
     }
 }
