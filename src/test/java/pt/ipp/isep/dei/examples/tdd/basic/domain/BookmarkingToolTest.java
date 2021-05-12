@@ -9,6 +9,8 @@ import java.util.List;
 
 public class BookmarkingToolTest {
 
+
+
     /**
      * checkIfDuplicate Case 1: Is Duplicate
      */
@@ -252,6 +254,25 @@ public class BookmarkingToolTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void addKeywordToUrl_caseEight(){
+        BookmarkingTool tool = new BookmarkingTool();
+        String url ="https://github.com";
+        String keyword = "programming";
+        Bookmark bookmark = new Bookmark(url);
+
+        ArrayList<Bookmark> savedBookmarks = tool.getSavedBookmarks();
+        savedBookmarks.add(bookmark);
+        tool.setSavedBookmarks(savedBookmarks);
+
+        tool.addKeywordToUrl(keyword,url);
+
+        String expected = "programming";
+        String actual = tool.getSavedBookmarks().get(0).getKeyword();
+
+        assertEquals(expected, actual);
+    }
+
     /**
      * addBookmark(String url)
      * tries to add a new Bookmark, if successful it returns the created object
@@ -318,6 +339,7 @@ public class BookmarkingToolTest {
 
         assertEquals(expected, actual);
     }
+
 
 
 }

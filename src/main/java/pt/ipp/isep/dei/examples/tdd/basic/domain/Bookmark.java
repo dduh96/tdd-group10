@@ -21,6 +21,9 @@ public class Bookmark {
     public void setKeyword(String keyword) {
         this.keyword = keyword;
     }
+    public String getKeyword() {
+        return this.keyword;
+    }
 
     public int getRating() {
         return rating;
