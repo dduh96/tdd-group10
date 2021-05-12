@@ -3,6 +3,7 @@ package pt.ipp.isep.dei.examples.tdd.basic.domain;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.awt.print.Book;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,8 +20,8 @@ public class BookmarkingToolTest {
         savedBookmarks.add(new Bookmark(url));
         tool.setSavedBookmarks(savedBookmarks);
 
-        boolean expected = false;
-        boolean actual = tool.checkIfNotDuplicate(url);
+        String expected = url;
+        String actual = tool.checkIfNotDuplicate(url).getUrl();
 
         assertEquals(expected, actual);
     }
@@ -33,8 +34,8 @@ public class BookmarkingToolTest {
         BookmarkingTool tool = new BookmarkingTool();
         String url = "https://github.com";
 
-        boolean expected = true;
-        boolean actual = tool.checkIfNotDuplicate(url);
+        Bookmark expected = null;
+        Bookmark actual = tool.checkIfNotDuplicate(url);
 
         assertEquals(expected, actual);
     }
@@ -47,8 +48,8 @@ public class BookmarkingToolTest {
         BookmarkingTool tool = new BookmarkingTool();
         String url = null;
 
-        boolean expected = false;
-        boolean actual = tool.checkIfNotDuplicate(url);
+        Bookmark expected = null;
+        Bookmark actual = tool.checkIfNotDuplicate(url);
 
         assertEquals(expected, actual);
     }
@@ -61,11 +62,11 @@ public class BookmarkingToolTest {
      */
     @Test
     public void checkIfUrlValid_caseOne(){
-        BookmarkingTool tool = new BookmarkingTool();
         String url = "hello, world!";
+        Bookmark bookmark = new Bookmark(url);
 
         boolean expected = false;
-        boolean actual = tool.checkIfUrlValid(url);
+        boolean actual = bookmark.checkIfUrlValid(url);
 
         assertEquals(expected, actual);
     }
@@ -77,11 +78,11 @@ public class BookmarkingToolTest {
      */
     @Test
     public void checkIfUrlValid_caseTwo(){
-        BookmarkingTool tool = new BookmarkingTool();
         String url = "https://github.com";
+        Bookmark bookmark = new Bookmark(url);
 
         boolean expected = true;
-        boolean actual = tool.checkIfUrlValid(url);
+        boolean actual = bookmark.checkIfUrlValid(url);
 
         assertEquals(expected, actual);
     }
@@ -93,11 +94,11 @@ public class BookmarkingToolTest {
      */
     @Test
     public void checkIfUrlValid_caseThree(){
-        BookmarkingTool tool = new BookmarkingTool();
         String url = null;
+        Bookmark bookmark = new Bookmark(url);
 
         boolean expected = false;
-        boolean actual = tool.checkIfUrlValid(url);
+        boolean actual = bookmark.checkIfUrlValid(url);
 
         assertEquals(expected, actual);
     }
