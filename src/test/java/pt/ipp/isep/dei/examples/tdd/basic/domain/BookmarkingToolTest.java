@@ -388,4 +388,18 @@ public class BookmarkingToolTest {
         assertEquals(expected, actual);
     }
 
+    /**
+     * countSecureUrl(): int
+     * Case 3: List empty
+     */
+    @Test
+    public void countSecureUrl_caseThree(){
+        BookmarkingTool tool = new BookmarkingTool();
+
+        int expected = -1;
+        int actual = tool.countSecureUrl();
+
+        assertEquals(expected, actual);
+    }
+
 }
