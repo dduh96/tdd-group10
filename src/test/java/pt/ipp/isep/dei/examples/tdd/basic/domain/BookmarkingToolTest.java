@@ -583,6 +583,20 @@ public class BookmarkingToolTest {
 
     }
 
+    /**
+     * filterByDomain(String domain)
+     * Case 1: domain is NULL
+     */
+    @Test
+    public void filterByDomain_CaseOne(){
+        BookmarkingTool tool = new BookmarkingTool();
+        String domain = null;
+
+        List<Bookmark> foundBms = tool.filterByDomain(domain);
+
+        assertNull(foundBms);
+
+    }
 
     /**
      * setDomainByURL(String url)

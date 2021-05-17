@@ -108,6 +108,12 @@ mvn test jacoco:report org.pitest:pitest-maven:mutationCoverage -DhistoryInputFi
 - [x] Case 2: url is NULL -> domain is NULL
 - [x] Case 3: url is invalid -> domain is NULL
 
+## filterByDomain(String domain): List<Bookmark>
+- [ ] Case 1: domain is NULL -> null
+- [ ] Case 2: no bms found -> emptyList()
+- [ ] Case 3: bms found -> List<Bookmark>
+- [ ] Case 4: bms found -> List correct size?
+
 ## Testcases
 ### checkIfNotDuplicate(Bookmark bookmark)
 Case 1: Is Duplicate
