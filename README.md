@@ -113,6 +113,7 @@ mvn test jacoco:report org.pitest:pitest-maven:mutationCoverage -DhistoryInputFi
 - [ ] Case 2: no bms found -> emptyList()
 - [ ] Case 3: bms found -> List<Bookmark>
 - [ ] Case 4: bms found -> List correct size?
+- [ ] Case 5: bmList empty -> emptyList()
 
 ## Testcases
 ### checkIfNotDuplicate(Bookmark bookmark)

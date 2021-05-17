@@ -599,6 +599,23 @@ public class BookmarkingToolTest {
     }
 
     /**
+     * filterByDomain(String domain)
+     * Case 2: No bms found
+     */
+    @Test
+    public void filterByDomain_CaseTwo(){
+        BookmarkingTool tool = new BookmarkingTool();
+        String domain = "google.com";
+        tool.addBookmark("https://github.com");
+
+        List<Bookmark> actual = tool.filterByDomain(domain);
+        List<Bookmark> expected = Collections.emptyList();
+
+        assertArrayEquals(expected.toArray(), actual.toArray());
+
+    }
+
+    /**
      * setDomainByURL(String url)
      * Case 1: url is a URL, -> return correct domain set
      */

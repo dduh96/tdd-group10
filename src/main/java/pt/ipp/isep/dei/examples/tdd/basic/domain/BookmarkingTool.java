@@ -100,7 +100,13 @@ public class BookmarkingTool {
     }
 
     public List<Bookmark> filterByDomain(String domain){
-        return Collections.emptyList();
+        List<Bookmark> foundBookmarks = Collections.emptyList();
+        if (domain != null){
+
+        }else{
+            foundBookmarks = null;
+        }
+        return foundBookmarks;
     }
 
 }
