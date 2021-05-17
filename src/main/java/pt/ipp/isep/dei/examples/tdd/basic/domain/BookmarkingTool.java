@@ -12,9 +12,9 @@ import java.util.stream.Collectors;
 public class BookmarkingTool {
     private ArrayList<Bookmark> savedBookmarks = new ArrayList<>();
 
-    public Bookmark addBookmark(String url) {
+    public Bookmark addBookmark(String url) throws IllegalArgumentException{
         Bookmark bookmark = new Bookmark(url);
-        if (!bookmark.checkIfUrlValid(url)) return null;
+        if (!bookmark.checkIfUrlValid(url)) throw new IllegalArgumentException("Invalid URL!");
         Bookmark foundBookmark = checkIfNotDuplicate(url);
         if (foundBookmark != null) { //is duplicated
             foundBookmark.increaseRating();

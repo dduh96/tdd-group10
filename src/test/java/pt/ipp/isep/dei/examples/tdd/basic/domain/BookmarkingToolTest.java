@@ -320,10 +320,9 @@ public class BookmarkingToolTest {
         BookmarkingTool tool = new BookmarkingTool();
         String url = null;
 
-        Bookmark expected = null;
-        Bookmark actual = tool.addBookmark(url);
-
-        assertEquals(expected, actual);
+        assertThrows(IllegalArgumentException.class, () -> {
+            tool.addBookmark(url);
+        });
     }
 
     /**
@@ -335,11 +334,11 @@ public class BookmarkingToolTest {
     public void addBookmark_caseFour(){
         BookmarkingTool tool = new BookmarkingTool();
         String url = "hello, world!";
+        
 
-        Bookmark expected = null;
-        Bookmark actual = tool.addBookmark(url);
-
-        assertEquals(expected, actual);
+        assertThrows(IllegalArgumentException.class, () -> {
+            tool.addBookmark(url);
+        });
     }
 
     @Test
