@@ -20,6 +20,7 @@ public class BookmarkingTool {
             foundBookmark.increaseRating();
             bookmark = foundBookmark;
         } else {
+            bookmark.setDomainByUrl(url);
             savedBookmarks.add(bookmark);
         }
         return bookmark;

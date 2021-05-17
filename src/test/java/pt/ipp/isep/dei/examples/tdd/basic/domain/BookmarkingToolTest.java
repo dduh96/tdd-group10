@@ -334,7 +334,7 @@ public class BookmarkingToolTest {
     public void addBookmark_caseFour(){
         BookmarkingTool tool = new BookmarkingTool();
         String url = "hello, world!";
-        
+
 
         assertThrows(IllegalArgumentException.class, () -> {
             tool.addBookmark(url);
@@ -594,7 +594,8 @@ public class BookmarkingToolTest {
         Bookmark bm = new Bookmark(url);
 
         String expected = "github.com";
-        String actual = bm.setDomainByUrl(url);
+        bm.setDomainByUrl(url);
+        String actual = bm.getDomain();
 
         assertEquals(expected, actual);
 
@@ -610,7 +611,8 @@ public class BookmarkingToolTest {
         Bookmark bm = new Bookmark(url);
 
         String expected = null;
-        String actual = bm.setDomainByUrl(url);
+        bm.setDomainByUrl(url);
+        String actual = bm.getDomain();
 
         assertEquals(expected, actual);
     }

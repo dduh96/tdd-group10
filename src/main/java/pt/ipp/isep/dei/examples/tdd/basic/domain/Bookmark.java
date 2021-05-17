@@ -44,12 +44,14 @@ public class Bookmark {
         return true;
     }
 
-    public String setDomainByUrl(String url){
-        if(!checkIfUrlValid(url)) return null;
-        String splitURL[]=url.split("/");
-        String domain = splitURL[2]; //todo weg mit www.
+    public void setDomainByUrl(String url){
+        if(!checkIfUrlValid(url)) {
+            this.domain= null;
+            return;
+        }
+        String[] splitURL =url.split("/");
 
-        return domain;
+        this.domain= splitURL[2];
     }
     public String getDomain(){
         return domain;
