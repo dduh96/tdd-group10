@@ -616,6 +616,29 @@ public class BookmarkingToolTest {
     }
 
     /**
+     * filterByDomain(String domain)
+     * Case 3: bms found
+     */
+    @Test
+    public void filterByDomain_CaseThree(){
+        BookmarkingTool tool = new BookmarkingTool();
+        String domain = "github.com";
+        String url1 = "https://github.com/dduh96";
+        String url2 = "https://google.com/search?q=python";
+        Bookmark bm1 = new Bookmark(url1);
+        Bookmark bm2 = new Bookmark(url2);
+        bm1.setDomainByUrl(url1);
+        bm2.setDomainByUrl(url2);
+        tool.setSavedBookmarks(new ArrayList<>(Arrays.asList(bm1, bm2)));
+
+        List<Bookmark> actual = tool.filterByDomain(domain);
+        List<Bookmark> expected = Arrays.asList(bm1);
+
+        assertArrayEquals(expected.toArray(), actual.toArray());
+
+    }
+
+    /**
      * setDomainByURL(String url)
      * Case 1: url is a URL, -> return correct domain set
      */
