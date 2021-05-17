@@ -590,7 +590,7 @@ public class BookmarkingToolTest {
      * Case 1: url is a URL, -> return correct domain set
      */
     @Test
-    public void setDomainByURL(){
+    public void setDomainByURL_CaseOne(){
         String url = "https://github.com/dduh";
         Bookmark bm = new Bookmark(url);
 
@@ -600,4 +600,21 @@ public class BookmarkingToolTest {
         assertEquals(expected, actual);
 
     }
+
+    /**
+     * setDomainByURL(String url)
+     * Case 1: url is NULL, -> throw NullPointerException
+     */
+    @Test
+    public void setDomainByURL_CaseTwo(){
+        String url = null;
+
+
+       assertThrows(NullPointerException.class, () -> {
+           Bookmark bm = new Bookmark(url); // setDomainByURL called in constructor
+        });
+
+    }
+
+
 }

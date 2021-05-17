@@ -104,8 +104,8 @@ mvn test jacoco:report org.pitest:pitest-maven:mutationCoverage -DhistoryInputFi
 - [x] Case 4: bms for some keywords found, but not for others -> return List for all found bms 
 
 ## setDomainByUrl(String url): String
-- [ ] Case 1: url is a URL, -> return correct domain set
-- [ ] Case 2: url is NULL -> throw MissingArgumentException
+- [x] Case 1: url is a URL, -> return correct domain set
+- [ ] Case 2: url is NULL -> throw NullPointerException
 - [ ] 
 - [ ]
 - [ ]
