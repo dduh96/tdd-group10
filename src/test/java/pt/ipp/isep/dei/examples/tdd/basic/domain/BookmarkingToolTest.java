@@ -585,4 +585,19 @@ public class BookmarkingToolTest {
     }
 
 
+    /**
+     * setDomainByURL(String url)
+     * Case 1: url is a URL, -> return correct domain set
+     */
+    @Test
+    public void setDomainByURL(){
+        String url = "https://github.com/dduh";
+        Bookmark bm = new Bookmark(url);
+
+        String expected = "github.com";
+        String actual = bm.setDomainByUrl(url);
+
+        assertEquals(expected, actual);
+
+    }
 }

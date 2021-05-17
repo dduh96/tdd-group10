@@ -98,4 +98,8 @@ public class BookmarkingTool {
         return filteredList;
     }
 
+    public List<Bookmark> filterByDomain(String domain){
+        return Collections.emptyList();
+    }
+
 }

@@ -3,7 +3,8 @@ package pt.ipp.isep.dei.examples.tdd.basic.domain;
 import java.net.URL;
 
 public class Bookmark {
-    private String url;
+    private final String url;
+    private String domain;
     private String keyword;
     private int rating;
 
@@ -11,8 +12,8 @@ public class Bookmark {
         this.url = url;
         keyword = "";
         rating = 1;
+        domain = setDomainByUrl(url);
     }
-    
 
     public String getUrl() {
         return url;
@@ -43,7 +44,10 @@ public class Bookmark {
         return true;
     }
 
-    public String associateByDomain(String url){
+    public String setDomainByUrl(String url){
         return null;
+    }
+    public String getDomain(){
+        return domain;
     }
 }
