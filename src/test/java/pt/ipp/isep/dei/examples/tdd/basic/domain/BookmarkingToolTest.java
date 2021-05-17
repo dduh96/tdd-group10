@@ -353,6 +353,8 @@ public class BookmarkingToolTest {
         assertEquals(expected, actual);
     }
 
+
+
     /**
      * countSecureUrl(): int
      * Case 1: has secure URLs
@@ -661,6 +663,21 @@ public class BookmarkingToolTest {
     }
 
     /**
+     * filterByDomain(String domain)
+     * Case 5: savedBms empty
+     */
+    @Test
+    public void filterByDomain_CaseFive(){
+        BookmarkingTool tool = new BookmarkingTool();
+        String domain = "github.com";
+
+        List<Bookmark> actual = tool.filterByDomain(domain);
+        List<Bookmark> expected = Collections.emptyList();
+
+        assertArrayEquals(expected.toArray(), actual.toArray());
+    }
+
+    /**
      * setDomainByURL(String url)
      * Case 1: url is a URL, -> return correct domain set
      */
@@ -669,9 +686,9 @@ public class BookmarkingToolTest {
         String url = "https://github.com/dduh";
         Bookmark bm = new Bookmark(url);
 
-        String expected = "github.com";
-        bm.setDomainByUrl(url);
-        String actual = bm.getDomain();
+        boolean expected = true;
+        boolean actual = bm.setDomainByUrl(url);
+
 
         assertEquals(expected, actual);
 
@@ -686,9 +703,8 @@ public class BookmarkingToolTest {
         String url = null;
         Bookmark bm = new Bookmark(url);
 
-        String expected = null;
-        bm.setDomainByUrl(url);
-        String actual = bm.getDomain();
+        boolean expected = false;
+        boolean actual = bm.setDomainByUrl(url);
 
         assertEquals(expected, actual);
     }

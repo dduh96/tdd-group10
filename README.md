@@ -70,7 +70,7 @@ mvn test jacoco:report org.pitest:pitest-maven:mutationCoverage -DhistoryInputFi
 #
 # Features Bookmarking
 - [x] count secure URLs
-- [ ] associate bookmarks from same domain
+- [x] associate bookmarks from same domain
 - [x] filter bookmarks by one keyword
 - [x] filter bookmarks by one or more keywords
 - [ ] remove TAG from bookmark
@@ -80,6 +80,10 @@ mvn test jacoco:report org.pitest:pitest-maven:mutationCoverage -DhistoryInputFi
 - [ ] sort bm by date desc
 
 # Testcases Bookmarking
+
+## Questions:
+- Are we allowed to break the 1 test per commit rule, if our method breaks other tests?
+- How to handle void functions (Mutation testing)?
 
 ## new testcases to increase mutation %
 - [x] addKeywordToUrl Case 8: Check if keyword was added
@@ -109,11 +113,11 @@ mvn test jacoco:report org.pitest:pitest-maven:mutationCoverage -DhistoryInputFi
 - [x] Case 3: url is invalid -> domain is NULL
 
 ## filterByDomain(String domain): List<Bookmark>
-- [ ] Case 1: domain is NULL -> null
-- [ ] Case 2: no bms found -> emptyList()
-- [ ] Case 3: bms found -> List<Bookmark>
-- [ ] Case 4: bms found -> List correct size?
-- [ ] Case 5: bmList empty -> emptyList()
+- [x] Case 1: domain is NULL -> null
+- [x] Case 2: no bms found -> emptyList()
+- [x] Case 3: bms found -> List<Bookmark>
+- [x] Case 4: bms found -> List correct size?
+- [x] Case 5: bmList empty -> emptyList()
 
 ## Testcases
 ### checkIfNotDuplicate(Bookmark bookmark)

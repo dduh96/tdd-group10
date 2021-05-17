@@ -44,14 +44,15 @@ public class Bookmark {
         return true;
     }
 
-    public void setDomainByUrl(String url){
+    public boolean setDomainByUrl(String url){
         if(!checkIfUrlValid(url)) {
-            this.domain= null;
-            return;
+            this.domain= "";
+            return false;
         }
         String[] splitURL =url.split("/");
 
         this.domain= splitURL[2];
+        return true;
     }
     public String getDomain(){
         return domain;

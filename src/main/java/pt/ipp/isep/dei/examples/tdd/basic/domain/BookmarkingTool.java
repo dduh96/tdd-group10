@@ -20,8 +20,10 @@ public class BookmarkingTool {
             foundBookmark.increaseRating();
             bookmark = foundBookmark;
         } else {
-            bookmark.setDomainByUrl(url);
-            savedBookmarks.add(bookmark);
+            //bookmark.setDomainByUrl(url); QUESTION: how to handle void methods?
+            if (bookmark.setDomainByUrl(url)) {
+                savedBookmarks.add(bookmark);
+            }
         }
         return bookmark;
     }
