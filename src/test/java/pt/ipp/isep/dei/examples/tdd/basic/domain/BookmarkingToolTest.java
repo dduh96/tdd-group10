@@ -639,6 +639,28 @@ public class BookmarkingToolTest {
     }
 
     /**
+     * filterByDomain(String domain)
+     * Case 4: found bms, list correct size?
+     */
+    @Test
+    public void filterByDomain_CaseFour(){
+        BookmarkingTool tool = new BookmarkingTool();
+        String domain = "github.com";
+        String url1 = "https://github.com/dduh96";
+        String url2 = "https://github.com/search?q=python";
+        Bookmark bm1 = new Bookmark(url1);
+        Bookmark bm2 = new Bookmark(url2);
+        bm1.setDomainByUrl(url1);
+        bm2.setDomainByUrl(url2);
+        tool.setSavedBookmarks(new ArrayList<>(Arrays.asList(bm1, bm2)));
+
+        int actual = tool.filterByDomain(domain).size();
+        int expected = 2;
+
+        assertEquals(expected, actual);
+    }
+
+    /**
      * setDomainByURL(String url)
      * Case 1: url is a URL, -> return correct domain set
      */
