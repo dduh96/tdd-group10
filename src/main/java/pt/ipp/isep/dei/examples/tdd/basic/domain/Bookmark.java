@@ -12,7 +12,7 @@ public class Bookmark {
         this.url = url;
         keyword = "";
         rating = 1;
-        domain = setDomainByUrl(url);
+        domain = "";
     }
 
     public String getUrl() {
@@ -45,6 +45,7 @@ public class Bookmark {
     }
 
     public String setDomainByUrl(String url){
+        if(!checkIfUrlValid(url)) return null;
         String splitURL[]=url.split("/");
         String domain = splitURL[2]; //todo weg mit www.
 

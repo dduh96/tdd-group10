@@ -608,12 +608,12 @@ public class BookmarkingToolTest {
     @Test
     public void setDomainByURL_CaseTwo(){
         String url = null;
+        Bookmark bm = new Bookmark(url);
 
+        String expected = null;
+        String actual = bm.setDomainByUrl(url);
 
-       assertThrows(NullPointerException.class, () -> {
-           Bookmark bm = new Bookmark(url); // setDomainByURL called in constructor
-        });
-
+        assertEquals(expected, actual);
     }
 
 

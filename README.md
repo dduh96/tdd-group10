@@ -105,7 +105,7 @@ mvn test jacoco:report org.pitest:pitest-maven:mutationCoverage -DhistoryInputFi
 
 ## setDomainByUrl(String url): String
 - [x] Case 1: url is a URL, -> return correct domain set
-- [ ] Case 2: url is NULL -> throw NullPointerException
+- [ ] Case 2: url is NULL -> return NULL
 - [ ] 
 - [ ]
 - [ ]
