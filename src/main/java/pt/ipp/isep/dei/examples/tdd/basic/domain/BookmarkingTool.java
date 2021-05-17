@@ -100,9 +100,12 @@ public class BookmarkingTool {
     }
 
     public List<Bookmark> filterByDomain(String domain){
-        List<Bookmark> foundBookmarks = Collections.emptyList();
+        List<Bookmark> foundBookmarks;
         if (domain != null){
-
+            foundBookmarks = savedBookmarks
+                    .stream()
+                    .filter(bm -> bm.getDomain().equals(domain))
+                    .collect(Collectors.toList());
         }else{
             foundBookmarks = null;
         }
