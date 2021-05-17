@@ -45,7 +45,10 @@ public class Bookmark {
     }
 
     public String setDomainByUrl(String url){
-        return null;
+        String splitURL[]=url.split("/");
+        String domain = splitURL[2]; //todo weg mit www.
+
+        return domain;
     }
     public String getDomain(){
         return domain;
