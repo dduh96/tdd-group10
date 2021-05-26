@@ -726,5 +726,20 @@ public class BookmarkingToolTest {
         assertEquals(expected,actual);
     }
 
+    /**
+     * deleteTag()
+     * Case 2: tag sucessfully deleted
+     */
+    @Test
+    public void deleteTag_CaseTwo(){
+        String url = "https://github.com/dduh";
+        String tag = "programming";
+        Bookmark bm = new Bookmark(url);
+        bm.setKeyword(tag);
+        bm.deleteTag();
+        String expected = "";
+        String actual = bm.getKeyword();
 
+        assertEquals(expected,actual);
+    }
 }
