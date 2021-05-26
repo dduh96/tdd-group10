@@ -742,4 +742,19 @@ public class BookmarkingToolTest {
 
         assertEquals(expected,actual);
     }
+
+    /**
+     * deleteTag()
+     * Case 3: tag already empty
+     */
+    @Test
+    public void deleteTag_CaseThree(){
+        String url = "https://github.com/dduh";
+        Bookmark bm = new Bookmark(url);
+
+        boolean expected = false;
+        boolean actual = bm.deleteTag();
+
+        assertEquals(expected,actual);
+    }
 }

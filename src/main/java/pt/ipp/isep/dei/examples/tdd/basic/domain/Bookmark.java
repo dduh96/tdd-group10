@@ -62,7 +62,8 @@ public class Bookmark {
         if(!keyword.equals("")) {
             this.keyword = "";
             return true;
+        }else {
+            return false;
         }
-        return false;
     }
 }
