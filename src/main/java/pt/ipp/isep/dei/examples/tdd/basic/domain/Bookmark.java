@@ -59,6 +59,10 @@ public class Bookmark {
     }
 
     public boolean deleteTag(){
-        return true;
+        if(!keyword.equals("")) {
+            this.keyword = "";
+            return true;
+        }
+        return false;
     }
 }
