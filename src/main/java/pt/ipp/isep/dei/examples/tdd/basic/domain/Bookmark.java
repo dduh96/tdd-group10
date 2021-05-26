@@ -57,4 +57,8 @@ public class Bookmark {
     public String getDomain(){
         return domain;
     }
+
+    public boolean deleteTag(){
+        return true;
+    }
 }
