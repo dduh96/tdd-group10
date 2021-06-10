@@ -73,7 +73,7 @@ mvn test jacoco:report org.pitest:pitest-maven:mutationCoverage -DhistoryInputFi
 - [x] associate bookmarks from same domain
 - [x] filter bookmarks by one keyword
 - [x] filter bookmarks by one or more keywords
-- [ ] remove TAG from bookmark
+- [X] remove TAG from bookmark
 - [ ] remove URL bm
 - [ ] add current date/time when adding bm
 - [ ] sort bm by rating desc
