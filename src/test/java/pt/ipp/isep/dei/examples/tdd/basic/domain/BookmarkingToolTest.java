@@ -836,6 +836,9 @@ public class BookmarkingToolTest {
     public void deleteBookmark_CaseFive(){
         String url = null;
         BookmarkingTool tool = new BookmarkingTool();
+        ArrayList<Bookmark> savedBookmarks = tool.getSavedBookmarks();
+        savedBookmarks.add(new Bookmark("https://github.com/dduh"));
+        tool.setSavedBookmarks(savedBookmarks);
 
         boolean expected = false;
         boolean actual = tool.deleteBookmark(url);
