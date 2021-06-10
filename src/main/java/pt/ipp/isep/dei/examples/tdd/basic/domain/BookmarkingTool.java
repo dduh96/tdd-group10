@@ -115,8 +115,9 @@ public class BookmarkingTool {
     }
 
     public boolean deleteBookmark(String url) {
-        boolean bookmarkDeleted = false;
+        boolean bookmarkDeleted;
         Iterator<Bookmark> bookmark = savedBookmarks.iterator();
+        bookmarkDeleted=false;
         while (bookmark.hasNext() && !bookmarkDeleted) {
             Bookmark nextBookmark = bookmark.next();
             if (nextBookmark.getUrl().equals(url)) {
