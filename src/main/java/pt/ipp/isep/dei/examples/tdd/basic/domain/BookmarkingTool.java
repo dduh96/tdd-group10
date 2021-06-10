@@ -114,5 +114,8 @@ public class BookmarkingTool {
         return foundBookmarks;
     }
 
+    public boolean deleteBookmark(String url){
+        return true;
+    }
 
 }

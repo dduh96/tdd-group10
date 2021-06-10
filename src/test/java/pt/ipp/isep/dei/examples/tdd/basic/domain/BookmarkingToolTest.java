@@ -757,4 +757,22 @@ public class BookmarkingToolTest {
 
         assertEquals(expected,actual);
     }
+
+    /**
+     * deleteBookmark()
+     * Case 1: sucessful return type
+     */
+    @Test
+    public void deleteBookmark_CaseOne(){
+        String url = "https://github.com/dduh";
+        BookmarkingTool tool = new BookmarkingTool();
+        tool.addBookmark(url);
+
+        boolean expected = true;
+        boolean actual = tool.deleteBookmark(url);
+
+        assertEquals(expected,actual);
+    }
+
+
 }
