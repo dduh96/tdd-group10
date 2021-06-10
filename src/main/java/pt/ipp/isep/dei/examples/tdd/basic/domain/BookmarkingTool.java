@@ -1,11 +1,5 @@
 package pt.ipp.isep.dei.examples.tdd.basic.domain;
 
-import java.awt.print.Book;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLEncoder;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -28,18 +22,6 @@ public class BookmarkingTool {
         return bookmark;
     }
 
-    /*public Bookmark findBookmark(Bookmark bookmark) {
-        Bookmark bookmarkExists = null;
-        Iterator<Bookmark> iteratorBookmark = savedBookmarks.iterator();
-        while (iteratorBookmark.hasNext() && bookmarkExists == null) {
-            Bookmark nextBookmark = iteratorBookmark.next();
-            if (nextBookmark.getUrl().equals(bookmark.getUrl()))
-                bookmarkExists = nextBookmark; //todo: maybe in while-head?
-        }
-        return bookmarkExists;
-    }*/
-
-
     public boolean addKeywordToUrl(String keyword, String url) {
         boolean keywordAdded = false;
         if (url == null || keyword == null || url.isEmpty() || keyword.isEmpty() || savedBookmarks.isEmpty())
@@ -47,7 +29,7 @@ public class BookmarkingTool {
         Iterator<Bookmark> bookmark = savedBookmarks.iterator();
         while (bookmark.hasNext() && !keywordAdded) {
             Bookmark nextBookmark = bookmark.next();
-            if (nextBookmark.getUrl().equals(url)) { //todo: into while-head?
+            if (nextBookmark.getUrl().equals(url)) {
                 nextBookmark.setKeyword(keyword);
                 keywordAdded = true;
             }
