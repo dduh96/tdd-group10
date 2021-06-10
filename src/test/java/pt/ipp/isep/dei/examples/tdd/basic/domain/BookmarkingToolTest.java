@@ -828,4 +828,18 @@ public class BookmarkingToolTest {
         assertEquals(expected,actual);
     }
 
+    /**
+     * deleteBookmark()
+     * Case 5: bookmark url is null
+     */
+    @Test
+    public void deleteBookmark_CaseFive(){
+        String url = null;
+        BookmarkingTool tool = new BookmarkingTool();
+
+        boolean expected = false;
+        boolean actual = tool.deleteBookmark(url);
+
+        assertEquals(expected,actual);
+    }
 }
