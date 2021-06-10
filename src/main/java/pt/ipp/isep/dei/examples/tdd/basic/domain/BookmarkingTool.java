@@ -116,14 +116,14 @@ public class BookmarkingTool {
 
     public boolean deleteBookmark(String url){
         boolean bookmarkDeleted = false;
-        if (url == null || savedBookmarks.isEmpty())
-            return false;
-        Iterator<Bookmark> bookmark = savedBookmarks.iterator();
-        while (bookmark.hasNext() && !bookmarkDeleted) {
-            Bookmark nextBookmark = bookmark.next();
-            if (nextBookmark.getUrl().equals(url)) {
-                savedBookmarks.remove(nextBookmark);
-                bookmarkDeleted = true;
+        if (url != null || !savedBookmarks.isEmpty()) {
+            Iterator<Bookmark> bookmark = savedBookmarks.iterator();
+            while (bookmark.hasNext() && !bookmarkDeleted) {
+                Bookmark nextBookmark = bookmark.next();
+                if (nextBookmark.getUrl().equals(url)) {
+                    savedBookmarks.remove(nextBookmark);
+                    bookmarkDeleted = true;
+                }
             }
         }
         return bookmarkDeleted;
