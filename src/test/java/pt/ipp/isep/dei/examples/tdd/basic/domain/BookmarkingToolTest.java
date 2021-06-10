@@ -811,4 +811,18 @@ public class BookmarkingToolTest {
         assertEquals(expected,actual);
     }
 
+    /**
+     * deleteBookmark()
+     * Case 4: bookmark doesn't exist
+     */
+    @Test
+    public void deleteBookmark_CaseFour(){
+        String url = "https://github.com/dduh";
+        BookmarkingTool tool = new BookmarkingTool();
+
+        boolean expected = false;
+        boolean actual = tool.deleteBookmark(url);
+
+        assertEquals(expected,actual);
+    }
 }
