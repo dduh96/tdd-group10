@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class BookmarkingTool {
     private ArrayList<Bookmark> savedBookmarks = new ArrayList<>();
 
-    public Bookmark addBookmark(String url) throws IllegalArgumentException{
+    public Bookmark addBookmark(String url) throws IllegalArgumentException {
         Bookmark bookmark = new Bookmark(url);
         if (!bookmark.checkIfUrlValid(url)) throw new IllegalArgumentException("Invalid URL!");
         Bookmark foundBookmark = checkIfNotDuplicate(url);
@@ -91,31 +91,41 @@ public class BookmarkingTool {
         return filteredList;
     }
 
-    public List<Bookmark> filterByKeyword(List<String> keywords){
+    public List<Bookmark> filterByKeyword(List<String> keywords) {
         ArrayList<Bookmark> filteredList = new ArrayList<>();
-        if(keywords == null || keywords.isEmpty()){
+        if (keywords == null || keywords.isEmpty()) {
             return null;
-        }else{
-            keywords.forEach( kw -> filteredList.addAll(filterByKeyword(kw)));
+        } else {
+            keywords.forEach(kw -> filteredList.addAll(filterByKeyword(kw)));
         }
         return filteredList;
     }
 
-    public List<Bookmark> filterByDomain(String domain){
+    public List<Bookmark> filterByDomain(String domain) {
         List<Bookmark> foundBookmarks;
-        if (domain != null){
+        if (domain != null) {
             foundBookmarks = savedBookmarks
                     .stream()
                     .filter(bm -> bm.getDomain().equals(domain))
                     .collect(Collectors.toList());
-        }else{
+        } else {
             foundBookmarks = null;
         }
         return foundBookmarks;
     }
 
-    public boolean deleteBookmark(String url){
-        return true;
+    public boolean deleteBookmark(String url) {
+        boolean bookmarkDeleted = false;
+        Iterator<Bookmark> bookmark = savedBookmarks.iterator();
+        while (bookmark.hasNext() && !bookmarkDeleted) {
+            Bookmark nextBookmark = bookmark.next();
+            if (nextBookmark.getUrl().equals(url)) {
+                savedBookmarks.remove(nextBookmark);
+                bookmarkDeleted = true;
+            }
+        }
+        return bookmarkDeleted;
+
     }
 
 }
