@@ -1,3 +1,4 @@
+/*
 package pt.ipp.isep.dei.examples.tdd.basic.domain;
 
 import org.junit.jupiter.api.Disabled;
@@ -7,9 +8,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class PuzzleTest {
 
-    /**
+    */
+/**
      * checkInputStringCaseOne: string only contains frp
-     */
+     *//*
+
     @Test
     @Disabled
     public void checkInputStringCaseOne() {
@@ -23,9 +26,11 @@ public class PuzzleTest {
 
     }
 
-    /**
+    */
+/**
      * checkInputStringCaseTwo: string contains characters other than frp
-     */
+     *//*
+
     @Test
     public void checkInputStringCaseTwo() {
         Puzzle puzzle = new Puzzle();
@@ -38,9 +43,11 @@ public class PuzzleTest {
 
     }
 
-    /**
+    */
+/**
      * checkInputStringCaseThree: string is null
-     */
+     *//*
+
     @Test
     @Disabled
     public void checkInputStringCaseThree() {
@@ -53,9 +60,11 @@ public class PuzzleTest {
     }
 
 
-    /**
+    */
+/**
      * checkIfWithinBorderCaseOne: orientation is null, instruction is null
-     */
+     *//*
+
     @Test
     public void checkIfWithinBorderCaseOne() {
         Puzzle puzzle = new Puzzle();
@@ -71,9 +80,11 @@ public class PuzzleTest {
 
     }
 
-    /**
+    */
+/**
      * checkIfWithinBorderCaseTwo: position (row, col) is outside the borders of the board
-     */
+     *//*
+
     @Test
     public void checkIfWithinBorderCaseTwo() {
         Puzzle puzzle = new Puzzle();
@@ -89,9 +100,11 @@ public class PuzzleTest {
 
     }
 
-    /**
+    */
+/**
      * checkIfWithinBorderCaseThree: movement is possible (within the border)
-     */
+     *//*
+
     @Test
     public void checkIfWithinBorderCaseThree() {
         Puzzle puzzle = new Puzzle();
@@ -107,9 +120,11 @@ public class PuzzleTest {
 
     }
 
-    /**
+    */
+/**
      * checkIfWithinBorderCaseFour: movement is not possible
-     */
+     *//*
+
     @Test
     public void checkIfWithinBorderCaseFour() {
         Puzzle puzzle = new Puzzle();
@@ -124,10 +139,15 @@ public class PuzzleTest {
         assertEquals(expected, actual);
 
     }
-    /*
-     *//**
+    */
+/*
+     *//*
+*/
+/**
      * printBoardCaseOne: Translates correctly
      *//*
+*/
+/*
     @Test
     public static void printBoardCaseOne(){
         Puzzle puzzle = new Puzzle();
@@ -152,6 +172,8 @@ public class PuzzleTest {
 
         assertEquals(expected, actual);
 
-    }*/
+    }*//*
+
 
 }
+*/

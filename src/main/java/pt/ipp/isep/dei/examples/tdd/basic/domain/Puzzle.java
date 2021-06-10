@@ -1,3 +1,4 @@
+/*
 package pt.ipp.isep.dei.examples.tdd.basic.domain;
 
 
@@ -28,11 +29,13 @@ public class Puzzle {
 
         for(String[] row: board)
             Arrays.fill(row, "-");
-        /*for (int m = 0; m < 6; m++) {
+        */
+/*for (int m = 0; m < 6; m++) {
             for (int n = 0; n < 6; n++) {
                 board[m][n] = "-";
             }
-        }*/
+        }*//*
+
 
         String[] inputArray = input.split("");
         String[] orientations = {"e","n","w","s"};
@@ -101,3 +104,4 @@ public class Puzzle {
         return futurePos;
     }
 }
+*/

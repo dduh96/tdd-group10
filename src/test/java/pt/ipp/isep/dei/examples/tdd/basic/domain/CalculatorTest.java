@@ -1,3 +1,4 @@
+/*
 package pt.ipp.isep.dei.examples.tdd.basic.domain;
 
 
@@ -42,14 +43,16 @@ public class CalculatorTest {
         //fail("a disabled failing test");
     }
 
-    /**
+    */
+/**
      * Test to ensure two positive numbers are summed correctly.<p>
      * <p>
      * For demonstration purposes the Arrange/Act/Assert syntax is used:<p>
      * Arrange: one positive number (three) and another positive number (two).<p>
      * Act: sum both numbers (three and two).<p>
      * Assert: the result is five.
-     */
+     *//*
+
     @Test
     public void ensureThreePlusTwoEqualsFive() {
 
@@ -70,14 +73,16 @@ public class CalculatorTest {
         assertEquals(expectedResult, result);
     }
 
-    /**
+    */
+/**
      * Test to ensure positive and negative numbers are summed correctly.<p>
      * <p>
      * For demonstration purposes the Arrange/Act/Assert syntax is used:<p>
      * Arranje a positive number (three) and a negative number (minus two)<p>
      * Act I sum three to minus two<p>
      * Assert the sum result should be one.
-     */
+     *//*
+
     @Test
     public void ensureThreePlusMinusTwoEqualsOne() {
         //HACK: for demonstration purposes only
@@ -98,9 +103,11 @@ public class CalculatorTest {
     }
 
 
-    /**
+    */
+/**
      * SUM
-     */
+     *//*
+
     // 4 + 3 = 7
     @Test
     public void ensureFourPlusThreeEqualsSeven() {
@@ -264,9 +271,11 @@ public class CalculatorTest {
     }
 
 
-    /**
+    */
+/**
      * SUBTRACT
-     */
+     *//*
+
     //4 - 3 = 1
     @Test
     public void ensureFourMinusThreeEqualsOne() {
@@ -429,9 +438,11 @@ public class CalculatorTest {
         assertEquals(expectedResult, result);
     }
 
-    /**
+    */
+/**
      * Multiply
-     */
+     *//*
+
     @Test
     public void ensureFourTimesThreeEqualsTwelve(){
         //HACK: for demonstration purposes only
@@ -584,9 +595,11 @@ public class CalculatorTest {
         assertEquals(expectedResult, result);
     }
 
-    /**
+    */
+/**
      * Divide
-     */
+     *//*
+
     @Test
     public void ensureEightDividedByThreeEqualsTwo(){
         //HACK: for demonstration purposes only
@@ -730,9 +743,11 @@ public class CalculatorTest {
         assertEquals(expectedResult, result);
     }
 
-    /**
+    */
+/**
      * Factorial
-     */
+     *//*
+
     @Test
     public void ensureFactorialOfThreeEqualsSix(){
         //HACK: for demonstration purposes only
@@ -794,3 +809,4 @@ public class CalculatorTest {
 
 
 
+*/
