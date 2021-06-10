@@ -792,6 +792,24 @@ public class BookmarkingToolTest {
         assertEquals(expected,actual);
     }
 
-    
+
+
+    /**
+     * deleteBookmark()
+     * Case 3: bookmark sucessfully deleted (bm cannot be found anymore)
+     */
+    @Test
+    public void deleteBookmark_CaseThree(){
+        String url = "https://github.com/dduh";
+        BookmarkingTool tool = new BookmarkingTool();
+        Bookmark bm = new Bookmark(url);
+        tool.deleteBookmark(url);
+        ArrayList<Bookmark> savedBookmarks = tool.getSavedBookmarks();
+
+        boolean expected = false;
+        boolean actual = savedBookmarks.contains(bm);
+
+        assertEquals(expected,actual);
+    }
 
 }
