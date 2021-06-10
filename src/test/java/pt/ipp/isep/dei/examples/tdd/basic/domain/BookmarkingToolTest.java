@@ -774,5 +774,22 @@ public class BookmarkingToolTest {
         assertEquals(expected,actual);
     }
 
+    /**
+     * deleteBookmark()
+     * Case 2: bookmark sucessfully deleted (list is empty)
+     */
+    @Test
+    public void deleteBookmark_CaseTwo(){
+        String url = "https://github.com/dduh";
+        BookmarkingTool tool = new BookmarkingTool();
+        tool.addBookmark(url);
+        tool.deleteBookmark(url);
+        ArrayList<Bookmark> savedBookmarks = tool.getSavedBookmarks();
+
+        int expected = 0;
+        int actual = savedBookmarks.size();
+
+        assertEquals(expected,actual);
+    }
 
 }
